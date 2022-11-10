@@ -1,0 +1,101 @@
+#Debut
+
+#appeler la fonction random qui renvoie un nombre entier aleatoire entre 1 et 3
+#appeler la fonction input qui renvoie u caractere de type string aleatoire
+
+#definir la fonction choixdujeux qui prend en parametre une valeur quelEstLeChoix
+    #ecrire "Bonjour vous allez jouer au chifoumi aussi appeler pierre feuille ciseau veuillez choisir le mode de jeux : taper 1 pour jouer avec un autre humain , taper 2 pour jouer contre l'odinateur 
+    #si la valeur de input est egal a 1
+        #alors lancer la fonction chifoumiDeuxJoueur
+    #Sinon si la valeur de input est egal a 2
+        #alors lancer la fonction chifoumiJoueurOrdi
+    #sinon retourner "veuillez entrer une valeur valide la prochaine fois"
+
+#definir la fonction nombreDeRoundParMatch qui prend en parametre nombreDeround
+    #ecrire "en combien de manche voulez vous jouer: taper le nombre de manches"
+    #assigner a nombreDeRound la valeur de la fonction input3
+    #retourner nombreDeRound
+
+
+#definir la fonction chifoumiDeuxJoeur qui prend en parametre une valeur x
+    #initialiser la variable Roundjoue a la valeur 0
+    #initialiser la variable nombreDePointJoueurUn a la valeur 0
+    #initialiser la variable nombreDePointJoueurDeux a la valeur 0
+    #lancer la fonction nombreDeRounParMatch
+    #tant que roundJoue n'est pas egal a nombreDeRoundParMatch 
+
+        #ecrire c'est partit taper 1 pour faire pierre , taper 2 pour faire feuille et 3 pour faire ciseaux
+        #assigner a choixDuJoueurUn la valeur de la fonction input1
+        #assigner a choixDuJoueurDeux la valeur de la fonction input2
+
+        #si choixDujoueurUn est egal a 1
+            #Alors assigner a choixDuJoueurUn le suite de caractere pierre
+        #Sinon si choixDujoueurUn est egal a 2
+            #Alors assigner a choixDuJoueurUn le suite de caractere feuille
+        #Sinon si choixDujoueurUn est egal a 3
+            #Alors assigner a choixDuJoueurUn le suite de caractere ciseaux
+        #Sinon retourner "il y a une erreur"
+
+        #si choixDujoueurDeux est egal a 1
+            #Alors assigner a choixDuJoueurDeux  le suite de caractere pierre
+        #Sinon si choixDujoueurDeux  est egal a 2
+            #Alors assigner a choixDuJoueurDeux  le suite de caractere feuille
+        #Sinon si choixDujoueurDeux est egal a 3
+            #Alors assigner a choixDuJoueurDeux  le suite de caractere ciseaux
+        #Sinon retourner "il y a une erreur"
+
+        #si choixDujoueurUn est egal a pierre et que choixDuJoueurDeux est egal a pierre ou que choixDujoueurUn est egal a feuille et que choixDuJoueurDeux est egal a feuille ou que choixDujoueurUn est egal a ciseaux et que choixDuJoueurDeux est egal a ciseaux
+            #alors retourner la suite de caractere "il y a égalité"
+        #si choixDujoueurUn est egal a pierre et que choixDuJoueurDeux est egal a ciseaux ou que choixDujoueurUn est egal a ciseaux et que choixDuJoueurDeux est egal a feuille ou que choixDujoueurUn est egal a feuille et que choixDuJoueurDeux est egal a pierre
+            #alors retourner la suite de caractere "victoire du Joueur 1"
+            #alors ajouter 1 a la variable nombreDePointJoueurUn
+        #si choixDujoueurDeux est egal a pierre et que choixDuJoueurUn est egal a ciseaux ou que choixDujoueurDeux est egal a ciseaux et que choixDuJoueurUn est egal a feuille ou que choixDujoueurDeux est egal a feuille et que choixDuJoueurUn est egal a pierre
+            #alors retourner la suite de caractere "Victoire du joueur 2"
+            #alors ajouter 1 a la variable nombreDePointJoueurDeux
+
+        #assigner a Roundjoue la valeur de Roundjoue + 1
+
+    #si nombreDePointJoueurUn est superieur a nombreDePointJoueurDeux
+        #alors ecrire "Le joueur 1 a gagné bravo!!"
+    #si nombreDePointJoueurUn est inferieur a nombreDePointJoueurDeux
+        #alors ecrire "Le joueur 2 a gagné c'est vraiment le meilleur!!!"
+    #si nombreDePointJoueurUn est egal a nombreDePointJoueurDeux
+        #alors ecrire "Vous avez fait une egalite!!!"
+
+
+#definir la fonction chifoumiJoueurOrdi qui prend en parametre une valeur x
+    #lancer la fonction nombreDeRounParMatch
+    #tant que roundJoue n'est pas egal a nombreDeRoundParMatch
+
+        #ecrire c'est partit taper 1 pour faire pierre , taper 2 pour faire feuille et 3 pour faire ciseaux
+        #assigner a choixDuJoueurUn la valeur de fonction input1
+        #assigner a choixDuBot la valeur de la fonction random
+
+        #si choixDujoueurUn est egal a 1
+            #Alors assigner a choixDuJoueurUn le suite de caractere pierre
+        #Sinon si choixDujoueurUn est egal a 2
+            #Alors assigner a choixDuJoueurUn le suite de caractere feuille
+        #Sinon si choixDujoueurUn est egal a 3
+            #Alors assigner a choixDuJoueurUn le suite de caractere ciseaux
+        #Sinon retourner "il y a une erreur"
+
+        #si choixDuBot est egal a 1
+            #Alors assigner a choixDuBot  le suite de caractere pierre
+        #Sinon si choixDuBot  est egal a 2
+            #Alors assigner a choixDuBot  le suite de caractere feuille
+        #Sinon si choixDuBot est egal a 3
+            #Alors assigner a choixDuBot  le suite de caractere ciseaux
+        #Sinon retourner "il y a une erreur"
+
+        #si choixDujoueurUn est egal a pierre et que choixDuBot est egal a pierre ou que choixDujoueurUn est egal a feuille et que choixDuBot est egal a feuille ou que choixDujoueurUn est egal a ciseaux et que choixDuBot est egal a ciseaux
+            #alors retourner la suite de caractere "il y a égalité"
+
+        #si choixDujoueurUn est egal a pierre et que choixDuBot est egal a ciseaux ou que choixDujoueurUn est egal a ciseaux et que choixDuBot est egal a feuille ou que choixDujoueurUn est egal a feuille et que choixDuBot est egal a pierre
+            #alors retourner la suite de caractere "victoire du Joueur 1"
+
+        #si choixDujoueurDeux est egal a pierre et que choixDuBot est egal a ciseaux ou que choixDuBot est egal a ciseaux et que choixDuJoueurUn est egal a feuille ou que choixDujoueurDeux est egal a feuille et que choixDuBot est egal a pierre
+            #alors retourner la suite de caractere "Victoire du Bot"
+        #assigner a Roundjoue la valeur de Roundjoue + 1
+
+Bot
+#Fin
