@@ -78,7 +78,7 @@ def CheckWin(quelJoueur, gagnant, conditionWin):
         if quelJoueur==1:
             print("Le joueur 2 a gagné!!!")
             conditionWin = True
-            displayGrid()
+            displayGrid() 
         if quelJoueur==2:
             print("L'ia a gagné!!!")
             conditionWin = True
