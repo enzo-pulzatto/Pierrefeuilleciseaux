@@ -84,7 +84,7 @@ def CheckWin(quelJoueur, gagnant, conditionWin):
             conditionWin = True
             displayGrid()
 
-    return conditionWin
+    return conditionWin 
 
 def theGame(conditionWin):
     displayGrid()
